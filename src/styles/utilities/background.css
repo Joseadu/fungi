@@ -1,0 +1,22 @@
+@layer utilities {
+
+    .background-base {
+      background-color: var(--background-base);
+    }
+    .background-light {
+      background-color: var(--background-light);
+    }
+    .background-extra-light {
+      background-color: var(--background-extra-light);
+    }
+    .background-dark {
+      background-color: var(--background-dark);
+    }
+    .background-extra-dark {
+      background-color: var(--background-extra-dark);
+    }
+  
+    .background-accent {
+      background-color: var(--background-accent-dark);
+    }
+}

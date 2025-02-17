@@ -1,72 +1,103 @@
 @import url(./styles//variables//colors.css);
 @import url(./styles//variables//typography.css);
+@import url(./styles//layout.css);
+@import url(./styles///utilities//utilities.css);
 
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-  margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+    margin: 0;
 }
 
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+    list-style: none;
 }
 
 body {
-  min-height: 100vh;
-  line-height: 1.5;
+    min-height: 100vh;
+    line-height: 1.5;
+    background-color: var(--background-main);
 }
 
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
 }
 
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
 }
 
-h1, h2, h3, h4, h5, h6, a, p {
-    margin: 0 ;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    margin: 0;
+}
 
 a:not([class]) {
-  text-decoration-skip-ink: auto;
-  text-decoration: none;
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 img,
 picture {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
-input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
 }
 
 textarea:not([rows]) {
-  min-height: 10em;
+    min-height: 10em;
 }
 
 :target {
-  scroll-margin-block: 5ex;
+    scroll-margin-block: 5ex;
 }
 
 [role="list"] {
@@ -75,6 +106,21 @@ textarea:not([rows]) {
     padding: 0;
 }
 
-ul, ul {
+ol,
+ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@layer utilities {
+    .visually-hidden {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
 }
