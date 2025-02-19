@@ -2,4 +2,6 @@
     --border-radius-1: var(--spacing-02);
     --border-radius-2: var(--spacing-03);
     --border-radius-3: var(--spacing-04);
+    --border-radius-4: var(--spacing-05);
+    --border-radius-5: var(--spacing-06);
 }
