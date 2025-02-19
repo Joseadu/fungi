@@ -27,8 +27,8 @@ jobs:
       - name: Deploy to Server
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.access-5017245088.webspace-host.com  }}
-          username: ${{ secrets.a932944 }}
-          password: ${{ secrets.WAU$Oda35LD%R82k }}
+          host: ${{ secrets.IONOS_HOST  }}
+          username: ${{ secrets.IONOS_USER }}
+          password: ${{ secrets.IONOS_PASS }}
           source: "dist/fungi/browser/"
           target: "/joseadu"
