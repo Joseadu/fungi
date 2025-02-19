@@ -31,4 +31,4 @@ jobs:
           username: ${{ secrets.IONOS_USER }}
           password: ${{ secrets.IONOS_PASS }}
           source: "dist/fungi/browser/"
-          target: "/joseadu"
+          target: "/kunden/homepages/25/d4298812114/htdocs/joseadu/"
