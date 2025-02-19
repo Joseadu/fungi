@@ -1,0 +1,14 @@
+.equal-columns {
+    display: grid;
+    --equal-columns-gap: var(--spacing-05);
+    gap: var(--equal-columns-gap, 1fr);
+
+    @media (width > 768px) {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    &[data-gap="large"] {
+        --equal-columns-gap: var(--spacing-09);
+    }
+}
