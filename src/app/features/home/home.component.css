@@ -27,7 +27,7 @@
     h3 {
         color: var(--text-brand);
         &[data-text="regular"] {
-            font-size: var(--card-title-font-size), var(--font-size-heading-sm);
+            font-size: var(--font-size-heading-sm);
         }
     }
 
