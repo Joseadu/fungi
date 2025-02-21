@@ -16,4 +16,27 @@
         flex-wrap: wrap;
         gap: var(--spacing-03) var(--spacing-05);
     }
+
+    @media (width < 768px) {
+        position: absolute;
+        top: 64px;
+        right: 0;
+        padding: var(--spacing-09);
+        background-color: var(--background-accent-main);
+        font-weight: 700;
+        font-size: var(--font-size-lg);
+        font-family: var(--ff-heading);
+        border-radius: 0 0 0 var(--border-radius-2);
+
+        ul {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        li + li {
+            margin-block-start: 1.5rem;
+            padding-block-start: 1.5rem;
+            border-top: 2px solid var(--background-accent-light);
+        }
+    }
 }
