@@ -1,0 +1,22 @@
+.footer {
+    text-align: center;
+    background-color: var(--background-dark);
+    padding-block: var(--spacing-09);
+    display: grid;
+    gap: var(--spacing-09);
+
+    a {
+        color: var(--text-main);
+    }
+
+    a:hover,
+    a:focus-visible {
+        color: var(--text-brand-light);
+    }
+}
+
+.footer-title {
+    font-size: var(--font-size-md);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+}
