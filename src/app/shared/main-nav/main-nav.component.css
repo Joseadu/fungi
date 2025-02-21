@@ -10,6 +10,21 @@
     align-items: center;
 }
 
+[aria-controls="primary-nav"] {
+    z-index: 100;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+
+    img {
+        border-radius: 0;
+    }
+
+    @media (width > 768px) {
+        display: none;
+    }
+}
+
 .primary-nav {
     ul {
         display: flex;
@@ -18,9 +33,11 @@
     }
 
     @media (width < 768px) {
+        display: none;
         position: absolute;
         top: 64px;
         right: 0;
+        z-index: 10;
         padding: var(--spacing-09);
         background-color: var(--background-accent-main);
         font-weight: 700;
@@ -39,4 +56,8 @@
             border-top: 2px solid var(--background-accent-light);
         }
     }
+}
+
+.show-menu {
+    display: block;
 }
