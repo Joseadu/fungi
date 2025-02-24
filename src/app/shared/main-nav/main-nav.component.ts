@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [
     CommonModule,
+    RouterLink
   ],
   templateUrl: './main-nav.component.html',
   styleUrl: './main-nav.component.css'
