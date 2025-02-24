@@ -6,8 +6,7 @@ import { FooterComponent } from '../../shared/footer/footer.component';
   selector: 'app-home',
   standalone: true,
   imports: [
-    MainNavComponent,
-    FooterComponent
+    MainNavComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
