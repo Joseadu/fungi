@@ -12,27 +12,3 @@
     font-size: var(--font-size-heading-xl);
     display: block;
 }
-
-.card {
-    display: grid;
-    gap: var(--spacing-05);
-    padding: var(--spacing-05);
-    background-color: var(--background-light);
-    border-radius: var(--spacing-07);
-
-    img {
-        border-radius: var(--border-radius-2);
-    }
-
-    h3 {
-        color: var(--text-brand);
-        &[data-text="regular"] {
-            font-size: var(--font-size-heading-sm);
-        }
-    }
-
-    /* .equal-columns {
-        --card-title-font-size: 1rem;
-        --card-title-color: purple;
-    } */
-}
