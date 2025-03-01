@@ -131,3 +131,12 @@ ul {
         width: 1px;
     }
 }
+
+.hero {
+    text-align: center;
+    font-style: var(--font-size-md);
+    color: var(--text-high-contrast);
+    background-image: url(./assets/images/hero.webp);
+    background-size: cover;
+    background-position: center;
+}
