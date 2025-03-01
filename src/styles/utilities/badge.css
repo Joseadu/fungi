@@ -1,0 +1,30 @@
+.tag-list {
+    display: flex;
+    gap: var(--spacing-03);
+    flex-wrap: wrap;
+
+    li {
+        font-family: var(--ff-heading);
+        font-size: var(--font-size-sm);
+        color: var(--text-high-contrast);
+        padding: 0 var(--spacing-02);
+        background-color: var(--tag-bg, red);
+        border-radius: var(--border-radius-1);
+    }
+
+    [data-edible="edible"] {
+        --tag-bg: var(--background-accent-main);
+    }
+    [data-edible="toxic"] {
+        --tag-bg: var(--clr-red-500);
+    }
+    [data-season="summer"] {
+        --tag-bg: var(--background-accent-main);
+    }
+    [data-season="spring"] {
+        --tag-bg: var(--clr-teal-500);
+    }
+    [data-season="fall"] {
+        --tag-bg: var(--clr-orange-500);
+    }
+}
