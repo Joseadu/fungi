@@ -34,4 +34,8 @@
     --card-title-font-size: var(--font-size-lg);
     --card-title-color: var(--text-high-contrast);
     --card-gap: var(--spacing-04);
-} 
+}
+
+.faq-bento {
+    --card-title-color: var(--text-high-contrast);
+}
