@@ -1,3 +1,22 @@
+.grid-equal-columns {
+    display: grid;
+    --grid-equal-columns-gap: var(--spacing-05);
+    gap: var(--grid-equal-columns-gap, 1fr);
+    align-items: var(--grid-equal-columns-vertical-aligment, stretch);
+
+    @media (width > 768px) {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    &[data-gap="large"] {
+        --grid-equal-columns-gap: var(--spacing-09);
+    }
+    &[data-aligment="centered"] {
+        --grid-equal-columns-vertical-aligment: center;
+    }
+}
+
 .grid-flow {
     display: grid;
     gap: 1rem;
