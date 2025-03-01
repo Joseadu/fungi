@@ -1,0 +1,13 @@
+.form-select {
+    padding: var(--spacing-03) var(--spacing-10) var(--spacing-03) var(--spacing-05);
+    background-color: var(--background-accent-main);
+    border: 0;
+    border-radius: var(--border-radius-2);
+    color: var(--text-high-contrast);
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(../../assets/icons/chevron-down.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: right 12px center;
+}
