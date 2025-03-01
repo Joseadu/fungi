@@ -1,6 +1,7 @@
 .card {
-    display: grid;
-    gap: var(--spacing-05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap, var(--spacing-05));
     padding: var(--spacing-05);
     background-color: var(--background-light);
     border-radius: var(--spacing-07);
@@ -9,15 +10,28 @@
         border-radius: var(--border-radius-2);
     }
 
-    h3 {
-        color: var(--text-brand);
-        &[data-text="regular"] {
-            font-size: var(--font-size-heading-sm);
-        }
+    .card-title {
+        color: var(--card-title-color, var(--text-brand));
+        font-size: var(--card-title-font-size, var(--font-size-heading-sm));
     }
 
-    /* .equal-columns {
-        --card-title-font-size: 1rem;
-        --card-title-color: purple;
-    } */
+    .card-note {
+        margin-block-start: auto;
+        background-color: var(--background-extra-light);
+        padding: var(--spacing-04);
+        border-radius: var(--border-radius-2);
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: -10%;
+            color: var(--text-main);
+        }
+    }
 }
+.mushroom-guide {
+    --card-title-font-size: var(--font-size-lg);
+    --card-title-color: var(--text-high-contrast);
+    --card-gap: var(--spacing-04);
+} 
