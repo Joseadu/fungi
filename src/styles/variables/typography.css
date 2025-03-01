@@ -56,7 +56,8 @@ h4 {
     color: var(--text-high-contrast);
 }
 
-h1, .h1 {
+h1,
+.h1 {
     font-size: var(--font-size-heading-lg);
 }
 
@@ -73,15 +74,19 @@ a:focus-visible {
     .text-main {
         color: var(--text-main);
     }
+
     .text-center {
         text-align: center;
     }
+
     .text-high-contrast {
         color: var(--text-high-contrast);
     }
+
     .text-brand {
         color: var(--text-brand);
     }
+
     .font-size-sm {
         font-size: var(--font-size-sm);
     }
@@ -89,13 +94,22 @@ a:focus-visible {
     .font-size-regular {
         font-size: var(--font-size-regular);
     }
+
     .font-size-md {
         font-size: var(--font-size-md);
     }
+
     .font-size-lg {
         font-size: var(--font-size-lg);
     }
+
     .section-title {
-      font-size: var(--font-size-heading-regular);
+        font-size: var(--font-size-heading-regular);
+    }
+
+    .title-highlight {
+        color: var(--text-brand);
+        font-size: var(--font-size-heading-xl);
+        display: block;
     }
 }
