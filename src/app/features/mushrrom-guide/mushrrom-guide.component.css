@@ -74,3 +74,19 @@
         }
     }
 }
+
+
+/* FILTERING WITH CSS START */
+.mushroom-guide:has(#season [value="spring"]:checked)
+.card:not(:has([data-season="spring"])) {
+    display: none;
+}
+.mushroom-guide:has(#season [value="summer"]:checked)
+.card:not(:has([data-season="summer"])) {
+    display: none;
+}
+.mushroom-guide:has(#season [value="fall"]:checked)
+.card:not(:has([data-season="fall"])) {
+    display: none;
+}
+/* FILTERING WITH CSS END */
