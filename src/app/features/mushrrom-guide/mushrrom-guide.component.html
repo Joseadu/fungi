@@ -37,22 +37,12 @@
         <div class="wrapper">
             <div class="flow">
                 <h2 class="section-title">Get to know your mushrooms</h2>
-                <div class="flex-group">
-                    <select id="season" class="form-select" (change)="setSeason($any($event.target).value)">
-                        <option value="">Season: all</option>
-                        <option value="spring">Spring</option>
-                        <option value="summer">Summer</option>
-                        <option value="fall">Fall</option>
-                    </select>
+
+                <app-mushroom-filter
+                        (seasonSelected)="setSeason($event)" 
+                        (edibilitySelected)="setEdibility($event)"
+                ></app-mushroom-filter>
     
-                    <select id="edible" class="form-select" (change)="setEdibility($any($event.target).value)">
-                        <option value="">Type: all</option>
-                        <option value="edible">Edible</option>
-                        <option value="toxic">Toxic</option>
-                    </select>
-                </div>
-    
-                <!-- grid of mushrroms -->
                 <div class="grid-auto-fill">
                     @if(filteredMushrooms().length > 0) {
                         @for(mushroom of filteredMushrooms(); track $index) {

@@ -1,0 +1,14 @@
+<div class="flex-group">
+    <select id="season" class="form-select" (change)="selectSeason($event)">
+        <option value="">Season: all</option>
+        <option value="spring">Spring</option>
+        <option value="summer">Summer</option>
+        <option value="fall">Fall</option>
+    </select>
+
+    <select id="edible" class="form-select" (change)="selectEdibility($event)">
+        <option value="">Type: all</option>
+        <option value="edible">Edible</option>
+        <option value="toxic">Toxic</option>
+    </select>
+</div>
