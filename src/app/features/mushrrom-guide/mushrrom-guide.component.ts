@@ -1,12 +1,14 @@
 import { Component, computed, signal } from '@angular/core';
 import { Mushroom, mushrooms } from '../../core/data/mushroom-data';
 import { CommonModule } from '@angular/common';
+import { KnowMushroomComponent } from './know-mushroom/know-mushroom.component';
 
 @Component({
   selector: 'app-mushrrom-guide',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    KnowMushroomComponent
   ],
   templateUrl: './mushrrom-guide.component.html',
   styleUrl: './mushrrom-guide.component.css'

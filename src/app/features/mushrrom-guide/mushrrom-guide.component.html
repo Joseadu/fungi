@@ -56,21 +56,9 @@
                 <div class="grid-auto-fill">
                     @if(filteredMushrooms().length > 0) {
                         @for(mushroom of filteredMushrooms(); track $index) {
-                        <div class="card">
-                            <h3 class="card-title">{{ mushroom.name }}</h3>
-                            <ul class="tag-list" role="list" aria-label="Mushroom Characteristics">
-                                <li [attr.data-season]="mushroom.season">
-                                    {{ mushroom.season }}
-                                </li>
-                                <li [attr.data-edible]="mushroom.edible">
-                                    {{ mushroom.edible }}
-                                </li>
-                            </ul>
-                            <p>{{ mushroom.description }}</p>
-                            <div class="card-note">
-                                <p><strong>Important notes:</strong> {{ mushroom.notes }}</p>
-                            </div>
-                        </div>
+                            <app-know-mushroom
+                                [mushroom]="mushroom"
+                            ></app-know-mushroom>
                         }
                     } @else {
                         <p>
