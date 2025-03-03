@@ -17,18 +17,16 @@ export class MushroomGuideComponent {
   selectedEdibility = signal<string>(''); 
 
   filteredMushrooms = computed(() => {
-    const seasonFilter = this.selectedSeason();
-    const edibilityFilter = this.selectedEdibility();
-
     const filtered = this.mushrooms().filter(mushroom =>
-      (seasonFilter === '' || mushroom.season.toLowerCase() === seasonFilter.toLowerCase()) &&
-      (edibilityFilter === '' || mushroom.edible.toLowerCase() === edibilityFilter.toLowerCase()) 
+      (this.selectedSeason() === '' || mushroom.season.toLowerCase() === this.selectedSeason().toLowerCase()) &&
+      (this.selectedEdibility() === '' || mushroom.edible.toLowerCase() === this.selectedEdibility().toLowerCase()) 
     );
     return filtered;
   });
 
   setSeason(season: string) {
     this.selectedSeason.set(season.trim().toLowerCase());
+    console.log(this.selectedSeason());
   }
 
   setEdibility(edibility: string) {

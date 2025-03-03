@@ -39,37 +39,43 @@
                 <h2 class="section-title">Get to know your mushrooms</h2>
                 <div class="flex-group">
                     <select id="season" class="form-select" (change)="setSeason($any($event.target).value)">
-                        <option value="">Season: all</option>  
+                        <option value="">Season: all</option>
                         <option value="spring">Spring</option>
                         <option value="summer">Summer</option>
                         <option value="fall">Fall</option>
                     </select>
-                    
+    
                     <select id="edible" class="form-select" (change)="setEdibility($any($event.target).value)">
-                        <option value="">Type: all</option>  
+                        <option value="">Type: all</option>
                         <option value="edible">Edible</option>
                         <option value="toxic">Toxic</option>
                     </select>
                 </div>
-
+    
                 <!-- grid of mushrroms -->
-                <div class="grid-auto-fit">
-                    @for(mushroom of filteredMushrooms(); track $index) {
-                    <div class="card">
-                        <h3 class="card-title">{{ mushroom.name }}</h3>
-                        <ul class="tag-list" role="list" aria-label="Mushroom Characteristics">
-                            <li [attr.data-edible]="mushroom.edible">
-                                {{ mushroom.edible }}
-                            </li>
-                            <li [attr.data-season]="mushroom.season">
-                                {{ mushroom.season }}
-                            </li>
-                        </ul>
-                        <p>{{ mushroom.description }}</p>
-                        <div class="card-note">
-                            <p><strong>Important notes:</strong> {{ mushroom.notes }}</p>
+                <div class="grid-auto-fill">
+                    @if(filteredMushrooms().length > 0) {
+                        @for(mushroom of filteredMushrooms(); track $index) {
+                        <div class="card">
+                            <h3 class="card-title">{{ mushroom.name }}</h3>
+                            <ul class="tag-list" role="list" aria-label="Mushroom Characteristics">
+                                <li [attr.data-season]="mushroom.season">
+                                    {{ mushroom.season }}
+                                </li>
+                                <li [attr.data-edible]="mushroom.edible">
+                                    {{ mushroom.edible }}
+                                </li>
+                            </ul>
+                            <p>{{ mushroom.description }}</p>
+                            <div class="card-note">
+                                <p><strong>Important notes:</strong> {{ mushroom.notes }}</p>
+                            </div>
                         </div>
-                    </div>
+                        }
+                    } @else {
+                        <p>
+                            No results match your search criteria
+                        </p>
                     }
                 </div>
             </div>
