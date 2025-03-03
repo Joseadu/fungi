@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MushrromGuideComponent } from './mushrrom-guide.component';
+import { MushroomGuideComponent } from './mushrrom-guide.component';
 
-describe('MushrromGuideComponent', () => {
-  let component: MushrromGuideComponent;
-  let fixture: ComponentFixture<MushrromGuideComponent>;
+describe('MushroomGuideComponent', () => {
+  let component: MushroomGuideComponent;
+  let fixture: ComponentFixture<MushroomGuideComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MushrromGuideComponent]
+      imports: [MushroomGuideComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MushrromGuideComponent);
+    fixture = TestBed.createComponent(MushroomGuideComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
